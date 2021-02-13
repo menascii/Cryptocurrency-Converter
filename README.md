@@ -5,7 +5,7 @@ Original app comes from https://www.appbrewery.co/p/ios-course-resources.
 
 Modified to include multiple cryptocurrencies. 
 
-Added features include image logo to corresponse selected cryptocurrency.
+Added features include image logo to correspond to selected cryptocurrency.
 
 This project is set up to add more cryptocurrencies and images.
 
