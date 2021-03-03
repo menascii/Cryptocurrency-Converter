@@ -47,7 +47,6 @@ extension ViewController: CoinManagerDelegate {
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
-    // NUMBER OF COLUMNS FOR DISPLAYING DATA
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if (currencyPicker == pickerView) {
             return 1
