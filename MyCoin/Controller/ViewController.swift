@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  ByteCoin
-//
-//  Created by Angela Yu on 11/09/2019.
-//  Copyright © 2019 The App Brewery. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -38,8 +30,6 @@ class ViewController: UIViewController {
     }
 }
 
-//MARK: - CoinManagerDelegate
-
 extension ViewController: CoinManagerDelegate {
     
     func didUpdatePrice(price: String, currency: String) {
@@ -51,11 +41,9 @@ extension ViewController: CoinManagerDelegate {
     }
     
     func didFailWithError(error: Error) {
-        //print(error)
+        print(error)
     }
 }
-
-//MARK: - UIPickerView DataSource & Delegate
 
 extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
@@ -72,7 +60,6 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         }
       }
       
-    // NUMBER OF ROWS OF DATA
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if (currencyPicker == pickerView) {
             return coinManager.currencyArray.count
@@ -86,7 +73,6 @@ extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         }
       }
       
-    // SETS THE TITLE FOR EACH ROW
       func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (currencyPicker == pickerView) {
             return coinManager.currencyArray[row]
